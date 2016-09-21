@@ -7,6 +7,9 @@ glm::vec2 ScreenObject::getPosition() {
 
 SDL_Rect ScreenObject::getSourceRect() {
 	SDL_Rect rect;
+
+	//TODO
+	
 	return rect;
 }
 

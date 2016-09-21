@@ -1,5 +1,5 @@
 #Files to be compiled
-OBJS = main.cpp WindowHandler.cpp globals.cpp InputHandler.cpp ScreenObject.cpp SpriteHandler.cpp
+OBJS = main.cpp WindowHandler.cpp globals.cpp InputHandler.cpp ScreenObject.cpp SpriteHandler.cpp Level.cpp
 
 #Compiler
 CC = g++
@@ -16,7 +16,7 @@ CFLAGS = -Wall -g -std=c++14
 LFLAGS = -lSDL2 -lSDL2_image
 
 #Name of our exectuable
-OBJ_NAME = exe
+OBJ_NAME = packman.exe
 
 #This is the target that compiles our executable
 #Run with command: "make"

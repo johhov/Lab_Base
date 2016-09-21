@@ -81,20 +81,21 @@ void WindowHandler::clear() {
 }
 
 void WindowHandler::drawList(std::vector<ScreenObject>* objects) {
-	for(auto o : *objects) {
+	for(auto o : (*objects)) {
 		draw(&o);
 	}
 }
 
 void WindowHandler::draw(ScreenObject* object) {
-	SDL_Rect source = object->getSourceRect();
-	SDL_Rect destination = object->getDestRect();
+	if(object != nullptr) {
+		SDL_Rect source = object->getSourceRect();
+		SDL_Rect destination = object->getDestRect();
 
-	SDL_Rect fillRect = { windowXSize / 4, windowYSize / 4, windowXSize / 2, windowYSize / 2 };
+		//TODO
 
-	SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
-	SDL_RenderFillRect(renderer, &fillRect);
-	//SDL_RenderCopy(renderer, m_spriteSheets[spriteSheetName].get(), &source, &destination);
+		SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
+		SDL_RenderFillRect(renderer, &destination);
+	}
 }
 
 void WindowHandler::update() {

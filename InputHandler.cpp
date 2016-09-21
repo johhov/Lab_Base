@@ -2,7 +2,7 @@
 #include "InputHandler.h"
 #include "globals.h"
 
-void InputHandler::init () {
+void InputHandler::init() {
 	//Add new events here and in GameEvent.h
 	eventRepeatRate[ActionEnum::QUIT] = 0;
 	eventRepeat[ActionEnum::QUIT] = INACTIVE;

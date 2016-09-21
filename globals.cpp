@@ -1,8 +1,12 @@
 #include "globals.h"
 
 const char gWINDOW_CONFIGURATION_FILE[] = "windowConfig";
+const char gLEVELS_FILE[] = "levelsList";
+
 bool gRunning = true;
-std::vector<ScreenObject> gWalls;
+
+std::vector<Level> gLevels;
+Level* gCurrentLevel;
 
 Uint32 color32(const Uint8 r, const Uint8 g, const Uint8 b, const Uint8 alpha)
 {
